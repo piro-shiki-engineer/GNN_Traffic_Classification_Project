@@ -124,9 +124,9 @@ GNNを用いて交通事故リスクを分類する手法の有効性を確認�
 
 # 参考
 
-* Pytorch geometricで理解するGCNs(公式ドキュメント和訳）https://github.com/omiita/PyTorchGeometric-Tutorial/blob/master/PyTorch_Geometric_Tutorial.ipynb
-* 「GNN-Pytorchによる実装（著者：村田）」のサポートページ https://github.com/atarum/GraphNeuralNetworks/tree/main
-* オリジナルのグラフデータセット作成（公式） https://pytorch-geometric.readthedocs.io/en/latest/tutorial/create_dataset.html
-* tomiharu0317さんの立川市のネットワーク分析 https://github.com/tomiharu0317/congestion-analysis
+* [Pytorch geometricで理解するGCNs(公式ドキュメント和訳）](https://github.com/omiita/PyTorchGeometric-Tutorial/blob/master/PyTorch_Geometric_Tutorial.ipynb)
+* [「GNN-Pytorchによる実装（著者：村田剛志 氏）」のサポートページ](https://github.com/atarum/GraphNeuralNetworks/tree/main) 
+* [オリジナルのグラフデータセット作成（公式）](https://pytorch-geometric.readthedocs.io/en/latest/tutorial/create_dataset.html)
+* [tomiharu0317 氏の立川市のネットワーク分析](https://github.com/tomiharu0317/congestion-analysis)
 
 
