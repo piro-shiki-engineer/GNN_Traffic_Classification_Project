@@ -1,9 +1,10 @@
 import pandas as pd
 import osmnx as ox
 import networkx as nx
+from typing import List
 
 
-def load_graph_and_data(place):
+def load_graph_and_data(place: str) -> nx.MultiDiGraph:
     G = ox.graph_from_place(place, network_type="drive")
 
     for node in G.nodes(data=True):
@@ -12,7 +13,7 @@ def load_graph_and_data(place):
     return G
 
 
-def load_accident_data(file_paths):
+def load_accident_data(file_paths: List[str]) -> pd.DataFrame:
     dfs = [pd.read_csv(file_path, encoding='utf-8') for file_path in file_paths]
     df_accidents = pd.concat(dfs)
 

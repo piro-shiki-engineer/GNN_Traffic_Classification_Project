@@ -1,17 +1,19 @@
+import networkx as nx
 import numpy as np
+import pandas as pd
 from tqdm.auto import tqdm
 from data_loading import load_graph_and_data, load_accident_data
 
 
 class Intersection:
-    def __init__(self, osmid, x, y):
+    def __init__(self, osmid: int, x: float, y: float):
         self.osmid = osmid
         self.x = x
         self.y = y
         self.accident_number = 0
 
 
-def preprocess_data(G, df_accidents, threshold=0.1):
+def preprocess_data(G: nx.MultiDiGraph, df_accidents: pd.DataFrame, threshold: int = 0.1) -> nx.MultiDiGraph:
     intersections = []
     inter_x = [attribute['x'] for osmid, attribute in G.nodes(data=True)]
     inter_y = [attribute['y'] for osmid, attribute in G.nodes(data=True)]
@@ -54,4 +56,3 @@ if __name__ == "__main__":
     ]
     df_accidents = load_accident_data(file_paths)
     G = preprocess_data(G, df_accidents)
-    print(G)

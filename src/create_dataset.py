@@ -1,9 +1,12 @@
 import torch
+import torch_geometric.data
 from torch_geometric.data import Data
 import osmnx as ox
 import networkx as nx
+from typing import List
 
-def create_dataset(G):
+
+def create_dataset(G: nx.MultiDiGraph) -> List[torch_geometric.data.Data]:
     dataset = []
 
     for node in G.nodes():
