@@ -65,7 +65,10 @@
 
 交通事故オープンデータ元：https://www.npa.go.jp/publications/statistics/koutsuu/opendata/index_opendata.html
 
-これらのファイルは交通事故データを含んでおり、モデルのトレーニングと評価に使用されます。
+**注意**: これらのデータはそのままではOSMnxに利用できません。 データを加工し、**世界測地系**に変換する必要があります。
+
+このため、データを直接アップロードしていません。データを準備する際には、必ず世界測地系に変換する処理を行ってください。
+
 
 
 ## 実験概要
@@ -118,3 +121,12 @@ GNNを用いて交通事故リスクを分類する手法の有効性を確認�
 擬似データセットでは良好な結果が得られましたが、実データセットでの結果はまだ改善の余地があります。
 
 今後の方針としては、データの不均衡や属性情報の追加など考えられる。
+
+# 参考
+
+* Pytorch geometricで理解するGCNs(公式ドキュメント和訳）https://github.com/omiita/PyTorchGeometric-Tutorial/blob/master/PyTorch_Geometric_Tutorial.ipynb
+* 「GNN-Pytorchによる実装（著者：村田）」のサポートページ https://github.com/atarum/GraphNeuralNetworks/tree/main
+* オリジナルのグラフデータセット作成（公式） https://pytorch-geometric.readthedocs.io/en/latest/tutorial/create_dataset.html
+* tomiharu0317さんの立川市のネットワーク分析 https://github.com/tomiharu0317/congestion-analysis
+
+
