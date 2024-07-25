@@ -2,9 +2,10 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 import networkx as nx
 import osmnx as ox
+from typing import Dict, Any
 
 
-def visualize_graph(G, heatmap_values, filepath):
+def visualize_graph(G: nx.MultiDiGraph, heatmap_values: Dict[Any, int], filepath: str) -> None:
     min_value, max_value = min(heatmap_values.values()), max(heatmap_values.values())
     normalized_heatmap_values = {
         node: (value - min_value) / (max_value - min_value) for node, value in heatmap_values.items()
